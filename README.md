@@ -1,2 +1,2 @@
-# runtime-crypter-2
-Instruction-level runtime crypting POC
+# Instruction-level runtime crypter POC
+Basic POC for instruction-level runtime crypting. By abusing pageguard VEH hooking, we are able to make it so that a maximum of 16 bytes of unencrypted code (max asm instruction length + 1 byte) exists at any point in time in the memory. This can be reduced to single asm instructions, but it would be too complicated to implement in this basic POC. Causes EXTREME performance loss in code, demo code slows down ~6000x compared to base level for unobfuscated code.
